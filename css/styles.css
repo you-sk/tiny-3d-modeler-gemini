@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#ui-panel {
+    width: 240px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+#property-panel {
+    width: 280px;
+    padding: 20px;
+    background-color: #2c2c2c;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.panel-section {
+    margin-bottom: 20px;
+}
+
+.property-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.property-row label {
+    flex: 1;
+    font-size: 0.9em;
+}
+
+.property-row input[type="number"],
+.property-row input[type="color"] {
+    flex: 1;
+    padding: 5px;
+    background-color: #3a3a3a;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    color: #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #5a5a5a;
+}
+
+button.active {
+    background-color: #6a6a6a;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+}
+
+button.danger {
+    background-color: #8c2a2a;
+}
+
+button.danger:hover {
+    background-color: #a13e3e;
+}
+
+#viewport {
+    flex-grow: 1;
+    position: relative;
+}
+
+canvas {
+    display: block;
+}
+
+#info-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(44, 44, 44, 0.9);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    pointer-events: none;
+}
+
+#shortcut-help {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(44, 44, 44, 0.95);
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    display: none;
+    max-width: 300px;
+}
+
+#shortcut-help h3 {
+    margin-top: 0;
+}
+
+#shortcut-help ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+#shortcut-help li {
+    margin-bottom: 5px;
+}
+
+.shortcut-key {
+    display: inline-block;
+    background-color: #3a3a3a;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
